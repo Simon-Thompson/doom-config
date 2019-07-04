@@ -1,7 +1,5 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here
-
 ;; Set gs SPC to target all visible windows with avy
 (setq avy-all-windows t)
 
