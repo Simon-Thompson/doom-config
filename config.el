@@ -16,7 +16,8 @@
   (list
    '("^\\(::.+\\)" . font-lock-function-name-face) ; ::Passage
    '("\\(\\[\\(.+\\)\\]\\)" . font-lock-keyword-face) ; [[foo]]
-   '("\\(<<.+>>\\)" . font-lock-builtin-face))) ; <<bar>>
+   '("\\(<<.+>>\\)" . font-lock-builtin-face) ; <<bar>>
+   '("/\\*\\(?:.\\|\n\\)*?\\*/\\|//\\(?:.\\|\n\\)*?$" . font-lock-comment-face)))
 
 (defvar twine-dev-env "twee -t sugarcane")
 
@@ -27,6 +28,8 @@
   (set (make-local-variable 'font-lock-defaults) '(twine-font-lock-keywords))
   (setq major-mode 'twine-mode)
   (setq mode-name "twine")
+  (setq comment-start "/*")
+  (setq comment-end "*/")
   (run-hooks 'twine-mode-hook))
 
 (provide 'twine-mode)
