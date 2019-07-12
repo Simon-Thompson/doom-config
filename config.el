@@ -1,4 +1,5 @@
-;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
+;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-*/
+;;; ;; Potato
 
 ;; Set gs SPC to target all visible windows with avy
 (setq avy-all-windows t)
